@@ -5,3 +5,7 @@
 :root {
     background-color: dimgrey;
 }
+
+img {
+    display: none;
+}

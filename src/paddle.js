@@ -20,6 +20,9 @@ export default class Paddle {
     moveRight() {
         this.speed = this.maxSpeed;
     }
+    stop() {
+        this.speed = 0;
+    }
 
     draw(ctx) {
         ctx.fillStyle = "#0ff";
@@ -31,8 +34,11 @@ export default class Paddle {
 
         this.position.x += this.speed;
 
-        if(this.position.x < 0) this.position.x = 0;
-        if(this.position.x + this.width > this.gameWidth) this.position.x = 650;
-
+        if(this.position.x < 0) {
+            this.position.x = 0;
+        } 
+        if(this.position.x + this.width > this.gameWidth) {
+            this.position.x = 650;
+        }
     }
 }
